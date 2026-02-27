@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>SIMRACING Pro League I • Web oficial</title>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#070a10">
+  <link rel="icon" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="Ir a inicio">
+        <img class="brandLogo" src="./assets/logos/league-logo.png" alt="SIMRACING Pro League I"/>
+        <div class="brandTitle">
+          <h1>SIMRACING Pro League I</h1>
+          <div class="sub">GT7 • Web oficial</div>
+        </div>
+      </a>
+
+      <nav class="navlinks" aria-label="Navegación">
+        <a class="navlink is-active" href="index.html">Inicio</a>
+        <a class="navlink" href="reglamento.html">Reglamento</a>
+        <a class="navlink" href="rondas.html">Rondas</a>
+        <a class="navlink" href="equipos.html">Equipos</a>
+        <a class="navlink" href="clasificacion.html">Clasificación</a>
+        <a class="navlink" href="multimedia.html">Multimedia</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn-lime" href="admin.html">Admin</a>
+        <a class="btn" href="clasificacion.html">Ver clasificación</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="heroCard heroHome">
+        <div class="heroInner">
+          <div>
+            <p class="pill"><span class="dot"></span> Temporada 1 • Febrero – Abril</p>
+            <h2 class="bigTitle"><span class="gold">SIMRACING</span> <span class="fire">Pro League I</span></h2>
+            <p class="muted" style="max-width:58ch;margin:10px 0 0">
+              Competición inaugural de Gran Turismo 7 (Gr.3) con BoP activado.
+              Ritmo, estrategia y gestión de neumáticos: aquí se gana la gloria digital.
+            </p>
+            <div class="pills">
+              <span class="pill">Categoría: Gr.3</span>
+              <span class="pill">BoP: ACTIVADO</span>
+              <span class="pill">Puntos: Victoria 25 • VR +2</span>
+            </div>
+          </div>
+          <div class="heroStats">
+            <div class="stat">
+              <div class="k">Líder actual</div>
+              <div class="v" id="homeLeader">—</div>
+            </div>
+            <div class="stat">
+              <div class="k">Rondas disputadas</div>
+              <div class="v" id="homeRounds">—</div>
+            </div>
+            <div class="stat">
+              <div class="k">Estado</div>
+              <div class="v"><span class="liveDot"></span> Online</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid3">
+      <article class="card">
+        <div class="head"><h2>¿Qué es SPL?</h2><span class="pill">Liga</span></div>
+        <div class="body">
+          <p class="muted">
+            SIMRACING Pro League es una liga competitiva centrada en carreras limpias, constancia y decisiones estratégicas.
+            Cada ronda propone un circuito diferente y condiciones de desgaste que obligan a pensar.
+          </p>
+          <div class="hr"></div>
+          <div class="small muted">¿Quieres participar? Contacta con la organización y prepárate para competir.</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="head"><h2>Reglamento</h2><span class="pill">Normas</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Categoría: <strong>Gr.3</strong> • BoP <strong>activado</strong>.</li>
+            <li>Puntuación: <strong>25</strong> al ganador + <strong>2</strong> por vuelta rápida.</li>
+            <li>Desgaste de neumáticos y combustible según cada ronda.</li>
+          </ul>
+          <div class="hr"></div>
+          <a class="btn btn-gold" href="reglamento.html">Ver reglamento completo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="head"><h2>Calendario</h2><span class="pill">10 rondas</span></div>
+        <div class="body">
+          <p class="muted">De Brands Hatch a Spa-Francorchamps. 10 rondas, un solo campeón.</p>
+          <div class="hr"></div>
+          <a class="btn" href="rondas.html">Ver rondas y circuitos</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <div class="head"><h2>Última hora</h2><span class="pill">Resultados</span></div>
+      <div class="body">
+        <div class="newsRow">
+          <div>
+            <div class="muted small">Marcadores en vivo</div>
+            <div class="big" id="homeLast">—</div>
+          </div>
+          <div class="newsActions">
+            <a class="btn" href="clasificacion.html">Clasificación</a>
+            <a class="btn btn-lime" href="admin.html">Panel Admin</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<div class="bottomNav">
+  <div class="bar bar4">
+    <a class="btn btn-gold" href="index.html">Inicio</a>
+    <a class="btn" href="rondas.html">Rondas</a>
+    <a class="btn" href="clasificacion.html">Clasificación</a>
+    <a class="btn btn-lime" href="admin.html">Admin</a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./app.js"></script>
+</body>
+</html>

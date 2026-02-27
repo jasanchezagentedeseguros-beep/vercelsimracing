@@ -1,0 +1,95 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>SIMRACING Pro League I • Admin</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#070a10">
+<link rel="icon" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <img class="brandLogo" src="./assets/logos/league-logo.png" alt="SIMRACING Pro League I"/>
+        <div class="brandTitle">
+          <h1>SIMRACING Pro League I</h1>
+          <div class="sub">Admin • Actualiza resultados</div>
+        </div>
+      </a>
+
+      <nav class="navlinks" aria-label="Navegación">
+        <a class="navlink" href="index.html">Inicio</a>
+        <a class="navlink" href="rondas.html">Rondas</a>
+        <a class="navlink" href="equipos.html">Equipos</a>
+        <a class="navlink" href="clasificacion.html">Clasificación</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn btn-gold" id="btnSave">Guardar</button>
+        <button class="btn" id="btnReload">Recargar</button>
+        <button class="btn btn-fire" id="btnLogout" style="display:none;">Salir</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="heroCard">
+        <div class="heroInner">
+          <div>
+            <p class="pill"><span class="dot"></span> Admin seguro (Supabase Auth)</p>
+            <h2 class="bigTitle">Panel <span class="gold">Admin</span></h2>
+            <div class="pills">
+              <span class="pill">Victoria 25 • VR +2</span>
+              <span class="pill" id="authState">No autenticado</span>
+            </div>
+          </div>
+          <div class="pills">
+            <span class="pill">Primero edita rondas y luego <strong>Guardar</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <div class="head"><h2>Login</h2><span class="pill">solo tú</span></div>
+        <div class="body">
+          <div class="form" id="loginBox">
+            <div class="field"><label>Email</label><input id="loginEmail" type="email" placeholder="tu email"/></div>
+            <div class="field"><label>Contraseña</label><input id="loginPass" type="password" placeholder="tu contraseña"/></div>
+            <button class="btn btn-lime" id="btnLogin">Entrar</button>
+            <div class="muted small">Crea el usuario en Supabase Auth → Users.</div>
+          </div>
+          <div class="muted small" id="loginHint" style="display:none;">✅ Autenticado. Ya puedes editar resultados.</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="head"><h2>Editar rondas</h2><span class="pill">resultados</span></div>
+        <div class="body">
+          <div class="muted small" style="margin-bottom:10px">Selecciona ganador y VR por ronda. Los cambios quedan “pendientes” hasta Guardar.</div>
+          <div class="rounds" id="adminRounds"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<div class="bottomNav">
+  <div class="bar">
+    <a class="btn" href="index.html">Web</a>
+    <a class="btn btn-lime" href="admin.html">Admin</a>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./admin.js"></script>
+</body></html>

@@ -1,0 +1,79 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Rondas • SIMRACING Pro League I</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#070a10">
+<link rel="icon" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <img class="brandLogo" src="./assets/logos/league-logo.png" alt="SIMRACING Pro League I"/>
+        <div class="brandTitle"><h1>SIMRACING Pro League I</h1><div class="sub">Rondas y circuitos</div></div>
+      </a>
+      <nav class="navlinks" aria-label="Navegación">
+        <a class="navlink" href="index.html">Inicio</a>
+        <a class="navlink" href="reglamento.html">Reglamento</a>
+        <a class="navlink is-active" href="rondas.html">Rondas</a>
+        <a class="navlink" href="equipos.html">Equipos</a>
+        <a class="navlink" href="clasificacion.html">Clasificación</a>
+        <a class="navlink" href="multimedia.html">Multimedia</a>
+      </nav>
+      <div class="actions">
+        <a class="btn" href="clasificacion.html">Ver clasificación</a>
+        <a class="btn btn-lime" href="admin.html">Admin</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="heroCard">
+        <div class="heroInner" style="align-items:flex-start">
+          <div>
+            <p class="pill"><span class="dot"></span> Calendario oficial SPL I</p>
+            <h2 class="bigTitle"><span class="gold">Rondas</span> <span class="fire">y circuitos</span></h2>
+            <p class="muted" style="max-width:62ch;margin:10px 0 0">
+              Cada ronda incluye vueltas, desgaste de neumáticos y configuración base del campeonato.
+              Las imágenes son ilustrativas del dossier oficial SPL.
+            </p>
+          </div>
+          <div class="pills">
+            <span class="pill">Combustible: 100%</span>
+            <span class="pill">BoP: ACTIVADO</span>
+            <span class="pill">Categoría: Gr.3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="head"><h2>Vista calendario</h2><span class="pill">Resumen</span></div>
+      <div class="body">
+        <img class="imgWide" src="./assets/rounds/calendar.png" alt="Calendario SIMRACING Pro League I" loading="lazy"/>
+      </div>
+    </section>
+
+    <section class="gridRounds" id="roundCards"></section>
+
+  </div>
+</main>
+
+<div class="bottomNav">
+  <div class="bar bar4">
+    <a class="btn" href="index.html">Inicio</a>
+    <a class="btn btn-gold" href="rondas.html">Rondas</a>
+    <a class="btn" href="clasificacion.html">Clasificación</a>
+    <a class="btn btn-lime" href="admin.html">Admin</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./app.js"></script>
+</body></html>
