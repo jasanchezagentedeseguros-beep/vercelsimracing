@@ -1,0 +1,67 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Equipos • SIMRACING Pro League I</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#070a10">
+<link rel="icon" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <img class="brandLogo" src="./assets/logos/league-logo.png" alt="SIMRACING Pro League I"/>
+        <div class="brandTitle"><h1>SIMRACING Pro League I</h1><div class="sub">Equipos</div></div>
+      </a>
+      <nav class="navlinks" aria-label="Navegación">
+        <a class="navlink" href="index.html">Inicio</a>
+        <a class="navlink" href="reglamento.html">Reglamento</a>
+        <a class="navlink" href="rondas.html">Rondas</a>
+        <a class="navlink is-active" href="equipos.html">Equipos</a>
+        <a class="navlink" href="clasificacion.html">Clasificación</a>
+        <a class="navlink" href="multimedia.html">Multimedia</a>
+      </nav>
+      <div class="actions">
+        <a class="btn" href="clasificacion.html">Clasificación</a>
+        <a class="btn btn-lime" href="admin.html">Admin</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="heroCard">
+        <div class="heroInner">
+          <div>
+            <p class="pill"><span class="dot"></span> Plantilla de equipos</p>
+            <h2 class="bigTitle"><span class="gold">Equipos</span> <span class="fire">SPL I</span></h2>
+            <p class="muted" style="max-width:60ch;margin:10px 0 0">
+              Aquí verás los equipos participantes. Esta página se alimenta de la tabla <span class="pill">teams</span> en Supabase.
+            </p>
+          </div>
+          <div class="pills"><span class="pill" id="teamCount">—</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gridTeams" id="teamsGrid"></section>
+
+  </div>
+</main>
+
+<div class="bottomNav">
+  <div class="bar bar4">
+    <a class="btn" href="index.html">Inicio</a>
+    <a class="btn" href="rondas.html">Rondas</a>
+    <a class="btn btn-gold" href="equipos.html">Equipos</a>
+    <a class="btn btn-lime" href="admin.html">Admin</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./app.js"></script>
+</body></html>
